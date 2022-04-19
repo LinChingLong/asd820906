@@ -75,10 +75,9 @@ header li:nth-last-child(1){
     flex-grow: 0;
 }
 /* -- nav -- */
-nav{
-    background-image: url("../commodity-image/commodity-main-img.jpg");
-    display: block;
-    height: 650px;
+iframe{
+    width: 1440px;
+    height: 800px;
 }
 nav img{
 }

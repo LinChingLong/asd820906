@@ -1,6 +1,7 @@
 @import url("reset.css");
 body{
     color: rgb(161, 112, 39);
+    /* font-family: Verdana, Geneva, sans-serif; */
 }
 .wrapper{
     width: 1440px;
@@ -40,7 +41,6 @@ header li a{
     text-align: center;
 }
 header li a:hover{
-
 }
 header li::after{
     content: '';
@@ -76,6 +76,7 @@ header li img{
 header li:nth-last-child(1){
     flex-grow: 0;
 }
+
 /* -- main -- */
 main{
     margin-top: 90px;

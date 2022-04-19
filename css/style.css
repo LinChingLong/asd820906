@@ -12,6 +12,9 @@ header{
     height: 146px;
     display: flex;
     align-items: center;
+    
+    position: fixed;
+    width: 1440px;
 }
 header img{
     display: block;
@@ -40,7 +43,7 @@ header li a{
     text-align: center;
 }
 header li a:hover{
-
+    background-color: rgb(225, 199, 177, 0.5);
 }
 header li::after{
     content: '';
