@@ -12,9 +12,6 @@ header{
     height: 146px;
     display: flex;
     align-items: center;
-    
-    position: fixed;
-    width: 1440px;
 }
 header img{
     display: block;
