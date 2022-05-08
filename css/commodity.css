@@ -1,269 +1,173 @@
 @import url("reset.css");
 body{
-    line-height: 1.2;
-    font-size: 24px;
-    color: white;
-}
-#wrapper{
-    width: 1440px;
-    margin: 0 auto;
+    box-sizing: border-box;
 
+    color: white;
+    line-height: 1.4;
+}
+.wrapper{
     position: relative;
 }
-/* -- header -- */
+/* -- header導覽列 -- */
 header{
-    background-image: url("../index-image/top\(1440x145\)-02.jpg");
-    height: 146px;
-    display: flex;
-    align-items: center;
-}
-header img{
-    display: block;
-    width: 86px;
-    height: 100px;
-    margin-left: 80px;
-}
-header ul{
-    display: flex;
-    width: 615px;
-    align-items: center;
-    margin-left: auto;
+    background-image: url("../index-image/footer\(1440x200\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    margin-right: 100px;
-}
-header li{
-    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 20px;
     position: relative;
-    margin: 0 auto;
 }
-header li a{
-    display: block;
+header .top-logo{
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    font-size: 24px;
     color: white;
-    text-align: center;
 }
-header li a:hover{
+header .top-logo img{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+header .top-logo p{
+    margin-left: 15px;
+}
+header nav{
+    float: right;
+}
+header nav ul{
+    padding-right: 20px;
+}
+header nav ul li{
+    float: left;
+    padding: 0 10px;
+}
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+header nav ul li a img{
+    width: 20px;
+}
+header nav ul li a:hover{
+    border-bottom: 1px solid #fff;
+    color: rgb(235, 192, 136);
+    transition: 1s;
+
+    /* cursor: pointer;  */
+}
+header nav .shopping-cart{
 
 }
-header li::after{
-    content: '';
-    display: block;
-    width: 1px;
-    height: 24px;
-    background-color: white;
-
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+header nav .shopping-cart a:hover img{
+    width: 40px;
+    transition: 1s;
 }
-header li:nth-last-child(2)::before{
-    content: '';
-    display: block;
-    width: 1px;
-    height: 24px;
-    background-color: white;
+header nav .fa-bars{
+    display: none;
+}
+/* -- movie -- */
+.wrapper .movie{
+}
+.wrapper iframe{
+    width: 100%;
+    height: 500px;
     
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-header li img{
-    display: block;
-    width: 35px;
-    height: 30px;
-}
-header li:nth-last-child(1){
-    flex-grow: 0;
-}
-/* -- nav -- */
-nav{
-    background-image: url("../about-image/1440x800.jpg");
-    display: block;
-    height: 800px;
-}
-nav h1{
-    font-size: 50px;
-    text-align: center;
-    padding-top: 260px;
-    letter-spacing: 10px;
+    display: block;  /* 為了去除影片下方的空白空間 */
 }
 /* -- main -- */
-main{
-    background-image: url("../about-image/1188x1670.jpg");
-    width: 1188px;
-    height: 1670px;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+.wrapper main{
+    width: 95%;
+    margin: 0 auto;
+}
+.wrapper main ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
-    position: absolute;
-    top: 600px;
-    right: 0;
-    left: 0;
-    margin: auto;
+    margin: 30px 0;
 }
-main .main-top{
-    width: 970px;
-    margin: 0 auto;
-    padding-top: 170px;
-}
-.main-top ul{
-    display: flex;
-    position: relative;
-}
-.main-top .lef{
-    position: absolute;
-    left: 0;
-}
-.main-top .rig{
-    position: absolute;
-    right: 0;
-}
-.main-top h2{
+.wrapper main ul li{
+    flex-basis: 300px;
     text-align: center;
-    margin: 20px auto;
+    padding: 20px;
 }
-.main-top .lef img{
-    display: block;
-    height: 345px;
-    height: 345px;
+.wrapper main ul li img{
+    width: 100%;
+    margin-bottom: 20px;
 }
-.main-top .rig img{
-    display: block;
-    height: 345px;
-}
-main .main-middle{
+.wrapper main ul li a{
+    text-decoration: none;
     display: flex;
-    width: 970px;
-    margin: 0 auto;
-    padding-top: 650px;
+
+    justify-content: center;
 }
-main .main-middle img{
-    display: block;
-    height: 345px;
+.wrapper main ul li a:hover{
+
 }
-main .main-middle h2{
+.wrapper main ul li p{
+    color: rgb(167, 132, 76);
     font-size: 24px;
-    margin-left: 40px;
-    padding-top: 50px;
+    padding: 0 10px;
 }
-main .main-buttom{
-    margin: 0 auto;
-    width: 1130px;
-    padding-top: 80px;
-}
-.main-buttom ul{
-    display: flex;
-    justify-content: space-between;
-}
-.main-buttom ul li{
-
-}
-.main-buttom ul img{
-    display: block;
-    height: 345px;
-    width: 345px;
-}
-.main-buttom ul h2{
-    text-align: center;
-    margin-top: 20px;
+.wrapper main ul li h3{
+    background-color: rgb(167, 132, 76);
+    color: white;
+    font-size: 24px;
+    padding: 0 3px;
 }
 /* -- footer -- */
 footer{
     background-image: url("../index-image/footer\(1440x200\).jpg");
-    height: 200px;
-    display: flex;
-    margin-top: 1400px;
-    position: relative;
-}
-footer img{
-    display: block;
-    height: 86px;
-    width: 86px;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 100px;
-    margin: auto;
-}
-footer h3{
-    color: white;
-    font-size: 24px;
-    line-height: 200px;
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 220px;
-    margin: auto;
-}
-footer ul{
+    padding: 20px 20px;
     display: flex;
-    width: 185px;
-    align-items: center;
     justify-content: space-between;
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 100px;
+    align-items: center;
 }
-footer ul li{
-    border: 2px solid white;
+footer .footer-logo{
+    display: flex;
+    align-items: center;
+}
+footer IMG{
     display: block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    position: relative;
+    width: 60px;
+    height: 60px;
 }
-footer ul li img{
-    display: block;
+footer .footer-logo p{
+    margin-left: 15px;
 }
-footer .img-1{
-    width: 28px;
-    height: 21px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+footer .footer-icon{
 }
-footer .img-2{
-    width: 12px;
-    height: 28px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-footer .img-3{
-    width: 26px;
-    height: 24px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-footer h2{
+footer .footer-icon a{
     color: white;
-    font-size: 20px;
-    text-align: center;
-
+    padding-bottom: 5px;
+}
+footer .footer-icon a:hover{
+    color: rgb(235, 192, 136);
+    transition: 1s;
+}
+footer .footer-icon i{
+    padding: 0 10px;
+}
+/* -- hint-word -- */
+#hint-word{
+    font-size: 12px;
     position: absolute;
-    left: 0;
-    right: 0;
     bottom: 0;
-    margin: auto;
+    right: 0;
+}
+
+
+/* ------------------------------ RWD 麵包屑------------------------------ */
+@media (max-width:1200px) {
+    .wrapper main ul li{
+        flex-basis: 300px;
+    }
 }

@@ -1,229 +1,205 @@
 @import url("reset.css");
-.wrapper{
-    width: 1440px;
-    margin: 0 auto;
+body{
+    box-sizing: border-box;
 
-    line-height: 1.4;
-    color: rgb(161, 112, 39);
-}
-/* -- header -- */
-header{
-    background-image: url("../index-image/top\(1440x145\)-02.jpg");
-    height: 146px;
-    display: flex;
-    align-items: center;
-}
-header img{
-    display: block;
-    width: 86px;
-    height: 100px;
-    margin-left: 80px;
-}
-header ul{
-    display: flex;
-    width: 615px;
-    align-items: center;
-    margin-left: auto;
-
-    margin-right: 100px;
-}
-header li{
-    flex-grow: 1;
-    position: relative;
-    margin: 0 auto;
-}
-header li a{
-    display: block;
-    text-decoration: none;
-    font-size: 24px;
     color: white;
-    text-align: center;
+    line-height: 1.4;
 }
-header li a:hover{
+.wrapper{
+    position: relative;
+}
+/* -- header導覽列 -- */
+header{
+    background-image: url("../index-image/footer\(1440x200\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 20px;
+    position: relative;
+}
+header .top-logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+header .top-logo img{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+header .top-logo p{
+    margin-left: 15px;
+}
+header nav{
+    float: right;
+}
+header nav ul{
+    padding-right: 20px;
+}
+header nav ul li{
+    float: left;
+    padding: 0 10px;
+}
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+header nav ul li a img{
+    width: 20px;
+}
+header nav ul li a:hover{
+    border-bottom: 1px solid #fff;
+    color: rgb(235, 192, 136);
+    transition: 1s;
+
+    /* cursor: pointer;  */
+}
+header nav .shopping-cart{
 
 }
-header li::after{
-    content: '';
-    display: block;
-    width: 1px;
-    height: 24px;
-    background-color: white;
+header nav .shopping-cart a:hover img{
+    width: 40px;
+    transition: 1s;
+}
+header nav .fa-bars{
+    display: none;
+}
 
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-header li:nth-last-child(2)::before{
-    content: '';
-    display: block;
-    width: 1px;
-    height: 24px;
-    background-color: white;
-    
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-header li img{
-    display: block;
-    width: 35px;
-    height: 30px;
-}
-header li:nth-last-child(1){
-    flex-grow: 0;
-}
-/* -- main -- */
+/* -- main 中間整體區塊 -- */
 main{
     display: flex;
-
-    position: relative;
 }
+/* -- article 熱門消息 -- */
 article{
-    position: absolute;
-    left: 100px;
+    width: 70%;
+    margin: 60px auto 100px;
+}
+article ul h2{
+    background-color: rgb(161, 112, 39);
+    color: white;
+    font-size: 36px;
+    text-align: center;
 
-    padding-top: 100px;
+    width: 160px;
+    margin-bottom: 30px;
 }
-article .top{
-    margin-bottom: 50px;
-    display: block;background-color: rgb(161, 112, 39);
-    width: 140px;
-    height: 40px;
-}
-article .top::after{
-    content: "";
+article ul h2::after{
     display: block;
-    width: 800px;
+    content: "";
     height: 1px;
+    width: 750px;
     background-color: rgb(161, 112, 39);
 }
-article .top h2{
-    font-size: 30px;
-    color: white;
-    line-height: 40px;
-    text-align: center;
-}
 article ul{
-    width: 730px;
+    padding: 0 60px;
 }
 article ul li{
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    align-items: center;
 }
-article ul img{
-    display: block;
-    margin-right: 30px;
-}
-article nav{
-    width: 250px;
-    height: 50px;
-    position: absolute;
-    
-    transform: translateY(10px);
-    transform: translateX(550px);
-}
-article nav ul{
-    display: flex;
-}
-article nav li{
-    display: block;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-article nav li a{
-    display: block;
+article ul li a{
     text-decoration: none;
-    font-size: 24px;
-    text-align: center;
+
+    margin-left: 50px;
+}
+article ul li a:hover{
+    background-color:rgb(161, 112, 39, .2);
+}
+article img{
+
+}
+article ul li p{
+    margin: 0 0 8px 0;
     color: rgb(161, 112, 39);
 }
-article nav .one-a{
-    color: white;
+article ul li p br{
+    display: none;
 }
-article nav li:nth-child(1){
-    background-color: rgb(161, 112, 39);
-}
-article nav li:nth-child(2){
-    border: 1px solid rgb(161, 112, 39);
-}
-article nav li:nth-child(3){
-    border: 1px solid rgb(161, 112, 39);
-}
-article nav li:nth-child(4){
-    border: 1px solid rgb(161, 112, 39);
-}
-.Word{
-
-}
-.Word h2{
-    margin-bottom: 10px;
-}
-.Word h3{
-    display: block;
+article ul li h3{
+    background-color:rgb(161, 112, 39);
     width: 80px;
-    height: 25px;
-    line-height: 25px;
-    text-align: center;
-    background-color: rgb(161, 112, 39);
+    margin: 0 0 10px 0;
     color: white;
+    text-align: center;
+    line-height: 24px;
+}
 
-    margin-bottom: 10px;
+/* -- article 熱門消息裡面bottom-number -- */
+article .bottom-number{
+    width: 400px;
+    transform: translate(500px,100px);
 }
-.Word p{
-    padding-left: 8px;
+article .bottom-number ul{
+    display: flex;
 }
-aside{
-    position: absolute;
-    right: 0;
-    display: block;
+article .bottom-number ul li{
+    padding: 0 5px;
 
 }
-aside .frame{
-    background-color: rgb(255, 226, 181,.8);
-    padding: 0 100px 0 50px;
-    padding-top: 250px;
-    height: 1300px;
-}
-aside .rigth{
-    margin-bottom: 50px;
-    display: block;background-color: rgb(161, 112, 39);
-    width: 120px;
-    height: 30px;
-}
-aside .rigth::after{
-    content: "";
+article .bottom-number a{
+    border: 1px solid rgb(161, 112, 39);
     display: block;
-    width: 300px;
-    height: 1px;
-    background-color: rgb(161, 112, 39);
-}
-aside .rigth h2{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
     font-size: 24px;
-    color: white;
-    line-height: 30px;
     text-align: center;
+    margin-left: 0;
+    color:rgb(161, 112, 39);
+}
+article .bottom-number .one-a{
+    background-color: rgb(161, 112, 39);
+    color: white;
+}
+article .bottom-number a:hover{
+    
+}
+
+/* -- aside 過去消息 -- */
+aside{
+    width: 30%;
+    background-color: rgb(255, 226, 181,.8);
 }
 aside ul{
+    width: 250px;
+    margin: 0 auto;
+
+    padding-top: 150px;
+}
+aside ul h2{
+    background-color: rgb(161, 112, 39);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+
+    width: 120px;
+}
+aside ul h2::after{
+    display: block;
+    content: "";
+    height: 1px;
+    width: 250px;
+    background-color: rgb(161, 112, 39);
+}
+aside ul a{
+    text-decoration: none;
+}
+aside ul a:hover{
     
 }
 aside ul li{
-    width: 250px;
+    text-align: center;
 }
 aside ul li img{
     display: block;
-    width: 250px;
-    margin: 20px 0;
-}
-aside ul li h2{
-}
-aside ul li h3{
-
+    margin: 30px 0 10px 0;
 }
 aside ul li p{
 
@@ -231,96 +207,250 @@ aside ul li p{
 /* -- footer -- */
 footer{
     background-image: url("../index-image/footer\(1440x200\).jpg");
-    height: 200px;
-    display: flex;
-    position: relative;
-    margin-top: 1500px;
-}
-footer img{
-    display: block;
-    height: 86px;
-    width: 86px;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 100px;
-    margin: auto;
-}
-footer h3{
-    color: white;
-    font-size: 24px;
-    line-height: 200px;
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 220px;
-    margin: auto;
-}
-footer ul{
+    padding: 20px 20px;
     display: flex;
-    width: 185px;
-    align-items: center;
     justify-content: space-between;
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 100px;
+    align-items: center;
 }
-footer ul li{
-    border: 2px solid white;
+footer .footer-logo{
+    display: flex;
+    align-items: center;
+}
+footer IMG{
     display: block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    position: relative;
+    width: 60px;
+    height: 60px;
 }
-footer ul li img{
-    display: block;
+footer .footer-logo p{
+    margin-left: 15px;
 }
-footer .img-1{
-    width: 28px;
-    height: 21px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+footer .footer-icon{
 }
-footer .img-2{
-    width: 12px;
-    height: 28px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-footer .img-3{
-    width: 26px;
-    height: 24px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-footer h2{
+footer .footer-icon a{
     color: white;
-    font-size: 20px;
-    text-align: center;
-
+    padding-bottom: 5px;
+}
+footer .footer-icon a:hover{
+    color: rgb(235, 192, 136);
+    transition: 1s;
+}
+footer .footer-icon i{
+    padding: 0 10px;
+}
+/* -- hint-word -- */
+#hint-word{
+    font-size: 12px;
     position: absolute;
-    left: 0;
-    right: 0;
     bottom: 0;
-    margin: auto;
+    right: 0;
+}
+@media (max-width:1200px) {
+    article ul h2::after{
+        width: 650px;
+    }
+    article .bottom-number{
+        width: 400px;
+        transform: translate(380px,100px);
+    }
+}
+@media (max-width:1050px) {
+    article ul h2::after{
+        width: 580px;
+    }
+    article ul li p br{
+        display: block;
+    }
+    article .bottom-number{
+        width: 400px;
+        transform: translate(300px,100px);
+    }
+}
+@media (max-width:1000px) {
+    article ul li{
+        display: block;
+        text-align: center;
+    }
+    article ul li p br{
+        display: none;
+    }
+    article ul li p {
+        margin-left: 0;
+    }
+    article img{
+        /* margin-left: 100px; */
+        padding-bottom: 20px;
+    }
+    article ul li h3{
+        display: none;
+    }
+    article ul h2{
+        font-size: 28px;
+    }
+    article .bottom-number{
+        width: 400px;
+        transform: translate(250px,100px);
+    }
+}
+@media (max-width:930px) {
+    article ul h2::after{
+        width: 500px;
+    }
+    article .bottom-number{
+        width: 400px;
+        transform: translate(200px,100px);
+    }
+}
+@media (max-width:925px) {
+    article ul li p:nth-child(2){
+        font-size: 20px;
+    }
+}
+@media (max-width:880px) {
+    article ul li{
+    }
+    aside ul h2::after{
+        width: 200px;
+    }
+    aside ul{
+        width: 180px;
+        padding: 0 10px;
+
+        margin-top: 150px;
+    }
+    aside ul li img{
+        width: 100%;
+    }
+    aside ul a{
+        display: block;
+        text-align: center;
+    }
+    aside ul h2{
+        font-size: 18px;
+    }
+}
+@media (max-width:800px) {
+    article ul h2::after{
+        width: 400px;
+    }
+    article ul h2{
+        font-size: 24px;
+    }
+    article img{
+        width: 300px;
+    }
+    aside ul h2::after{
+        width: 180px;
+    }
+    article .bottom-number{
+        width: 400px;
+        transform: translate(100px,100px);
+    }
+}
+@media (max-width:680px) {
+    article ul li p{
+        font-size: 14px;
+    }
+    article ul h2::after{
+        width: 350px;
+    }
+    aside ul{
+        width: 160px;
+        padding: 0 10px;
+
+        margin-top: 150px;
+    }
+    aside ul h2::after{
+        width: 150px;
+    }
+    article .bottom-number{
+        width: 400px;
+        transform: translate(50px,100px);
+    }
+}
+@media (max-width:620px) {
+    article img{
+        width: 250px;
+    }
+    article ul h2::after{
+        width: 300px;
+    }
+        aside ul{
+            width: 140px;
+    }        
+    aside ul h2{
+        width: 100px;
+    }
+    aside ul h2::after{
+        width: 130px;
+    }
+    article ul h2{
+        width: 130px;
+    }
+    article .bottom-number{
+        width: 400px;
+        transform: translate(20px,100px);
+    }
+    article .bottom-number a{
+        border:none;
+}
+@media (max-width:520px) {
+    article li{
+        padding: 0 20px;
+    }
+    article ul h2::after{
+        width: 240px;
+    }
+    article img{
+        width: 200px;
+    }
+    article ul li p{
+        font-size: 12px;
+        padding: 0 20px;
+    }
+    aside ul li p{
+        font-size: 12px;
+    }
+    aside ul{
+        width: 100px;
+    }      
+    aside ul h2::after{
+        display: none;
+    }  
+}
+@media (max-width:520px) {
+    article ul h2::after{
+        display: none;
+    }
+    article li{
+        padding: 0 ;
+    } 
+    article .bottom-number ul li{
+        padding: 0 2px;
+    }
+    article .bottom-number a{
+        font-size: 14px;
+    }
+}
+@media (max-width:400px) {
+    article img{
+        width: 150px;
+    }
+    article ul li p{
+        font-size: 10px;
+    }
+    aside ul li p{
+        font-size: 10px;
+    }
+    aside ul{
+        width: 80px;
+    }
+    aside ul h2{
+        font-size: 12px;
+        width: 80px;
+    }  
+    article .bottom-number{
+        width: 400px;
 }

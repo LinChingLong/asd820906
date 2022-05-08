@@ -1,0 +1,195 @@
+@import url("reset.css");
+body{
+    box-sizing: border-box;
+
+    color: rgb(111, 81, 41);
+}
+/* ----------------------------- header導覽列 ----------------------------- */
+header{
+    background-image: url("../index-image/footer\(1440x200\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 20px;
+    position: relative;
+}
+header .top-logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+header .top-logo img{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+header .top-logo p{
+    margin-left: 15px;
+}
+header nav{
+    float: right;
+}
+header nav ul{
+    padding-right: 20px;
+}
+header nav ul li{
+    float: left;
+    padding: 0 10px;
+}
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+header nav ul li a img{
+    width: 20px;
+}
+header nav ul li a:hover{
+    border-bottom: 1px solid #fff;
+    color: rgb(235, 192, 136);
+    transition: 1s;
+
+    /* cursor: pointer;  */
+}
+header nav .shopping-cart{
+
+}
+header nav .shopping-cart a:hover img{
+    width: 40px;
+    transition: 1s;
+}
+header nav .fa-bars{
+    display: none;
+}
+/* ----------------------------- 麵包屑 ----------------------------- */
+.wrapper .Bread-crumbs{
+    transform: translate(120px,80px);
+    width: 200px;
+}
+.wrapper .Bread-crumbs a{
+    text-decoration: none;
+    color:  rgb(111, 81, 41);
+}
+.wrapper .Bread-crumbs a:hover{
+    border-bottom: 1px solid rgb(111, 81, 41);
+    transition: 1s;
+}
+/* ----------------------------- main 主內容 ----------------------------- */
+.wrapper main{
+    display: flex;
+    margin: 80px auto;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapper main .left-img{ 
+    width: 400px;
+    height: 400px;
+}
+.wrapper main .left-img img{
+    width: 100%;
+}
+.wrapper main .right-post{
+    height: 300px;
+    position: relative;
+    padding-top: 50px;
+}
+.wrapper main .right-post .top-post{
+    margin-bottom: 20px;
+    line-height: 1.2;
+
+    margin-bottom: 50px;
+}
+.wrapper main .right-post .top-post h3{
+    font-size: 36px;
+}
+.wrapper main .right-post .top-post h4{
+    font-size: 24px;
+}
+.wrapper main .right-post .middle-post{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.wrapper main .right-post .middle-post img{
+    width: 120px;
+    height: 35px;
+}
+.wrapper main .right-post .middle-post .price{
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+}
+.wrapper main .right-post .middle-post .price h5{
+    background-color: rgb(111, 81, 41);
+    color: white;
+    
+    display: block;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+}
+.wrapper main .right-post .middle-post .price h6{
+    font-size: 28px;
+    
+    margin-left: 10px;
+}
+.wrapper main .right-post a{
+    text-decoration: none;
+}
+.wrapper main .right-post p{
+    background-color: rgb(111, 81, 41);
+    color: white;
+    padding: 10px 20px;
+    width: 200px;
+    border-radius: 20px;
+    font-size: 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* -- footer -- */
+footer{
+    background-image: url("../index-image/footer\(1440x200\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer-logo{
+    display: flex;
+    align-items: center;
+}
+footer IMG{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+footer .footer-logo p{
+    color: white;
+    margin-left: 15px;
+}
+footer .footer-icon{
+}
+footer .footer-icon a{
+    color: white;
+    padding-bottom: 5px;
+}
+footer .footer-icon a:hover{
+    color: rgb(235, 192, 136);
+    transition: 1s;
+}
+footer .footer-icon i{
+    padding: 0 10px;
+}
+
+@media (max-width:900px) {
+
+}

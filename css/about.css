@@ -1,222 +1,365 @@
 @import url("reset.css");
+body{
+    box-sizing: border-box;
+
+    color: white;
+    line-height: 1.4;
+}
 .wrapper{
-    width: 1440px;
-    margin: 0 auto;
-    background-repeat: no-repeat;
+    position: relative;
 }
-/* -- header -- */
+/* -- header導覽列 -- */
 header{
-    background-image: url("../index-image/top\(1440x145\)-02.jpg");
-    height: 146px;
-    display: flex;
-    align-items: center;
-}
-header img{
-    display: block;
-    width: 86px;
-    height: 100px;
-    margin-left: 80px;
-}
-header ul{
-    display: flex;
-    width: 615px;
-    align-items: center;
-    margin-left: auto;
-
-    margin-right: 100px;
-}
-header li{
-    flex-grow: 1;
-    position: relative;
-    margin: 0 auto;
-}
-header li a{
-    display: block;
-    text-decoration: none;
-    font-size: 24px;
-    color: white;
-    text-align: center;
-}
-header li a:hover{
-
-}
-header li::after{
-    content: '';
-    display: block;
-    width: 1px;
-    height: 24px;
-    background-color: white;
-
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-header li:nth-last-child(2)::before{
-    content: '';
-    display: block;
-    width: 1px;
-    height: 24px;
-    background-color: white;
-    
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-header li img{
-    display: block;
-    width: 35px;
-    height: 30px;
-}
-header li:nth-last-child(1){
-    flex-grow: 0;
-}
-/* -- nav -- */
-iframe{
-    width: 1440px;
-    height: 800px;
-}
-nav img{
-}
-/* -- main -- */
-main{
-    width: 1188px;
-    margin: 0 auto;
-
-    font-size: 24px;
-    color: rgb(167, 132, 76);;
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-main ul{
-    display: flex;
-    flex-wrap: wrap;
-}
-main ul li{
-    flex-basis: 350px;
-    flex-grow: 1;
-}
-main img{
-    display: block;
-    margin: 0 auto;
-}
-main li div{
-    display: flex;
-    justify-content: center;
-    margin: 40px auto;
-    align-items: center;
-}
-main h2{
-
-}
-main h3{
-    display: block;
-    width: 45px;
-    height: 45px;
-    background-color: rgb(167, 132, 76);
-    color: white;
-    line-height: 45px;
-    text-align: center;
-    margin: 0 10px;
-}
-main p {
-
-}
-/* -- footer -- */
-footer{
     background-image: url("../index-image/footer\(1440x200\).jpg");
-    height: 200px;
-    display: flex;
-    position: relative;
-}
-footer img{
-    display: block;
-    height: 86px;
-    width: 86px;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 100px;
-    margin: auto;
-}
-footer h3{
-    color: white;
-    font-size: 24px;
-    line-height: 200px;
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 220px;
-    margin: auto;
-}
-footer ul{
     display: flex;
-    width: 185px;
     align-items: center;
     justify-content: space-between;
 
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 100px;
-}
-footer ul li{
-    border: 2px solid white;
-    display: block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
+    padding: 10px 20px;
     position: relative;
 }
-footer ul li img{
-    display: block;
-}
-footer .img-1{
-    width: 28px;
-    height: 21px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-footer .img-2{
-    width: 12px;
-    height: 28px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-footer .img-3{
-    width: 26px;
-    height: 24px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-footer h2{
+header .top-logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
     color: white;
-    font-size: 20px;
-    text-align: center;
+}
+header .top-logo img{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+header .top-logo p{
+    margin-left: 15px;
+}
+header nav{
+    float: right;
+}
+header nav ul{
+    padding-right: 20px;
+}
+header nav ul li{
+    float: left;
+    padding: 0 10px;
+}
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+header nav ul li a img{
+    width: 20px;
+}
+header nav ul li a:hover{
+    border-bottom: 1px solid #fff;
+    color: rgb(235, 192, 136);
+    transition: 1s;
 
+    /* cursor: pointer;  */
+}
+header nav .shopping-cart{
+
+}
+header nav .shopping-cart a:hover img{
+    width: 40px;
+    transition: 1s;
+}
+header nav .fa-bars{
+    display: none;
+}
+/* -- main-img -- */
+.wrapper .main-img{
+    background-image: url("../about-image/1440x800.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    height: 800px;
+}
+.wrapper .main-img h1{
+    text-align: center;
+    
+    font-size: 50px;
+    padding-top:300px;
+}
+/* -- main .top-- */
+.wrapper main{
+    background-image: url("../about-image/1188x1670.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 1188px;
+    height: 1670px;
+    margin: 0 auto;
+
+    transform: translateY(-200px);
+    box-shadow: 0px 0px 12px rgb(0 0 0 / 50%);
+}
+.wrapper main .top{
+    display: flex;
+    font-size: 24px;
+
+    justify-content: space-around;
+    padding-top: 100px;
+}
+.wrapper main .top{
+    width:100%;
+
+    margin: 0 auto;
+}
+.wrapper main .top .left-1{
+    text-align: center;
+}
+.wrapper main .top .left-1 h2{
+    margin-bottom: 30px;
+}
+.wrapper main .top .left-1 img{
+    margin-bottom: 30px;
+
+    
+}
+.wrapper main .top .left-1 p{
+}
+.wrapper main .top .right-1{
+    
+    text-align: center;
+}
+.wrapper main .top .right-1 h2{
+    margin-bottom: 30px;
+}
+.wrapper main .top .right-1 img{
+    margin-bottom: 30px;
+}
+.wrapper main .top .right-1 p{
+}
+/* -- main .middle-- */
+.wrapper main .middle{
+    width:100%;
+
+    margin: 60px auto 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapper main .middle img{
+
+}
+.wrapper main .middle p{
+    font-size: 24px;
+}
+/* -- main .buttum-- */
+.wrapper main .buttum{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapper main .buttum img{
+    margin: 50px 0 20px 0;
+}
+.wrapper main .buttum p{
+    font-size: 24px;
+    text-align:center ;
+}
+
+/* -- footer -- */
+footer{
+    background-image: url("../index-image/footer\(1440x200\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer-logo{
+    display: flex;
+    align-items: center;
+}
+footer IMG{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+footer .footer-logo p{
+    margin-left: 15px;
+}
+footer .footer-icon{
+}
+footer .footer-icon a{
+    color: white;
+    padding-bottom: 5px;
+}
+footer .footer-icon a:hover{
+    color: rgb(235, 192, 136);
+    transition: 1s;
+}
+footer .footer-icon i{
+    padding: 0 10px;
+}
+/* -- hint-word -- */
+#hint-word{
+    font-size: 12px;
     position: absolute;
-    left: 0;
-    right: 0;
     bottom: 0;
-    margin: auto;
+    right: 0;
+}
+
+
+/* ------------------------------ RWD 麵包屑------------------------------ */
+@media (max-width:1200px) {
+    .wrapper main{
+        width: 1100px;
+        height: 1500px;
+    }
+    .wrapper main img{
+        height: 300px;
+    }
+}
+@media (max-width:1100px) {
+    .wrapper main{
+        width: 1000px;
+        height: 1400px;
+    }
+    .wrapper main img{
+        height: 250px;
+    }
+    .wrapper main .top{
+    }
+    .wrapper main .middle{
+    }
+}
+@media (max-width:1000px) {
+    .wrapper main{
+        width: 860px;
+        height: 1200px;
+    }
+    .wrapper main img{
+        height: 200px;
+    }
+    .wrapper .main-img{
+        height: 600px;
+    }
+    .wrapper .main-img h1{
+        text-align: center;
+        
+        font-size: 50px;
+        padding-top:150px;
+    }
+}
+@media (max-width:860px) {
+    .wrapper main .top h2{
+        font-size: 18px;
+    }
+    .wrapper main .top p{
+        font-size: 18px;
+    }
+    .wrapper main .middle p{
+        font-size: 18px;
+    }
+    .wrapper main .buttum p{
+        font-size: 18px;
+    }
+    .wrapper main{
+        width: 720px;
+        height: 1000px;
+    }
+    .wrapper main img{
+        height: 150px;
+    }
+}
+@media (max-width:720px) {
+    .wrapper main{
+        width: 600px;
+        height: 800px;
+    }
+    .wrapper main .top{
+        padding-top: 30px;
+    }
+    .wrapper main .top .left-1 h2{
+        margin-bottom: 10px;
+    }
+    .wrapper main .top .left-1 img{
+        margin-bottom: 10px;
+    }
+    .wrapper main .top .right-1 h2{
+        margin-bottom: 10px;
+    }
+    .wrapper main .top .right-1 img{
+        margin-bottom: 10px;
+    }
+    .wrapper main .middle{
+        margin-top: 10px;
+    }
+}
+@media (max-width:600px) {
+    .wrapper .main-img{
+        height: 450px;
+    }
+    .wrapper .main-img h1{
+        text-align: center;
+        
+        font-size: 30px;
+        padding-top:100px;
+    }
+    .wrapper main{
+        width: 450px;
+        height: 650px;
+    }
+    .wrapper main img{
+        height: 130px;
+    }
+    .wrapper main .top{
+        padding-top: 20px;
+    }
+    .wrapper main .top h2{
+        font-size: 14px;
+    }
+    .wrapper main .top p{
+        font-size: 14px;
+    }
+    .wrapper main .middle p{
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    .wrapper main .buttum p{
+        font-size: 14px;
+    }
+    .wrapper main .middle img{
+        margin-left: 20px;
+    }
+    .wrapper main .middle p br{
+        display: none;
+    }
+    .wrapper main .buttum img{
+        margin-top: 20px;
+    }
+}
+@media (max-width:450px) {
+    .wrapper main{
+        width: 370px;
+        height: 1650px;
+    }
+    .wrapper main img{
+        height: 180px;
+    }
+    .wrapper main .top{
+        display: block;
+        text-align: center;
+    }
+    .wrapper main .middle{
+        display: block;
+        text-align: center;
+    }
+    .wrapper main .buttum{
+        display: block;
+        text-align: center;
+    }
+    .wrapper main .middle p br{
+        display: none;
+    }
 }
