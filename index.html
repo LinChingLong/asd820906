@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KALULU - PRO</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/start-animation.css">
     <!-- 開頭動畫引入 -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
 </head>
 <body>
@@ -34,7 +34,7 @@
             </a>
             <nav>
                 <i class="fa-solid fa-bars"></i>
-                <ul>
+                <ul class="fa-bars-backul">
                     <li><a href="about.html">製作過程</a></li>
                     <li><a href="commodity.html">商品介紹</a></li>
                     <li><a href="follow.html">關於我們</a></li>
@@ -55,14 +55,14 @@
 
             <section>
                 <div class="img-left">
-                    <img src="./index-image/image-1(460x720).jpg" alt="">
+                    <img data-aos="fade-right" data-aos-anchor-placement="top-bottom" src="./index-image/image-1(460x720).jpg" alt="">
                 </div>
                 <h2>
                     <p>美味しいおやつ。</p>
                     <p>綺麗のもとは、</p>
                 </h2>
                 <div class="img-right">
-                    <img src="./index-image/image-2(460x720).jpg" alt="">
+                    <img data-aos="fade-left" data-aos-anchor-placement="top-bottom" src="./index-image/image-2(460x720).jpg" alt="">
                 </div>
             </section>
             <div class="loop-img">
@@ -107,7 +107,8 @@
                 </div>
             </div>
             <div class="details">
-                <img src="./index-image/pic-about.jpg" alt="">
+                <img data-aos="fade-up"
+                data-aos-duration="1000" src="./index-image/pic-about.jpg" alt="">
                 <div class="News">
                     <p> 連絡電話: +886 02-2314-4253<br>
                         營業時間:<br>
@@ -189,7 +190,7 @@
     crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9d5bfc2927.js" crossorigin="anonymous"></script>
     <script src="./javascript/index.js"></script> 
-    
+
     
 
     <script>
@@ -200,6 +201,11 @@
             }, 1500)
         }
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+        
 
 </body>
 </html>
