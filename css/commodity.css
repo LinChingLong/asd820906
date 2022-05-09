@@ -1,269 +1,308 @@
 @import url("reset.css");
 body{
-    line-height: 1.2;
-    font-size: 24px;
-    color: white;
-}
-#wrapper{
-    width: 1440px;
-    margin: 0 auto;
+    box-sizing: border-box;
 
+    color: white;
+    line-height: 1.4;
+}
+.wrapper{
     position: relative;
 }
-/* -- header -- */
-header{
-    background-image: url("../index-image/top\(1440x145\)-02.jpg");
-    height: 146px;
-    display: flex;
-    align-items: center;
-}
-header img{
-    display: block;
-    width: 86px;
-    height: 100px;
-    margin-left: 80px;
-}
-header ul{
-    display: flex;
-    width: 615px;
-    align-items: center;
-    margin-left: auto;
-
-    margin-right: 100px;
-}
-header li{
-    flex-grow: 1;
-    position: relative;
-    margin: 0 auto;
-}
-header li a{
-    display: block;
-    text-decoration: none;
-    font-size: 24px;
-    color: white;
-    text-align: center;
-}
-header li a:hover{
-
-}
-header li::after{
-    content: '';
-    display: block;
-    width: 1px;
-    height: 24px;
-    background-color: white;
-
-    position: absolute;
-    left: 0;
+/* ------------- 購物車 -------------- */
+.main__shoppingcart__container{
+    position: fixed;
     top: 0;
+    left: 0;
     bottom: 0;
-    margin: auto;
-}
-header li:nth-last-child(2)::before{
-    content: '';
-    display: block;
-    width: 1px;
-    height: 24px;
-    background-color: white;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
     
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    display: none;
 }
-header li img{
-    display: block;
-    width: 35px;
-    height: 30px;
-}
-header li:nth-last-child(1){
-    flex-grow: 0;
-}
-/* -- nav -- */
-nav{
-    background-image: url("../about-image/1440x800.jpg");
-    display: block;
-    height: 800px;
-}
-nav h1{
-    font-size: 50px;
-    text-align: center;
-    padding-top: 260px;
-    letter-spacing: 10px;
-}
-/* -- main -- */
-main{
-    background-image: url("../about-image/1188x1670.jpg");
-    width: 1188px;
-    height: 1670px;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
 
-    position: absolute;
-    top: 600px;
-    right: 0;
-    left: 0;
-    margin: auto;
-}
-main .main-top{
-    width: 970px;
-    margin: 0 auto;
-    padding-top: 170px;
-}
-.main-top ul{
-    display: flex;
+.main__shoppingcart__container .shoppingcart__container{
+    background-color: white;
+    border-radius: 20px;
+    color: rgb(111, 81, 41);
+    width: 80%;
+    max-width: 800px;
+    margin: 60px auto;
+
+    /* .post{
+
+    } */
+    
+    padding: 80px 0;
+
     position: relative;
 }
-.main-top .lef{
+
+.main__shoppingcart__container .fa-xmark{
     position: absolute;
-    left: 0;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+
+    font-size: 20px;
 }
-.main-top .rig{
-    position: absolute;
-    right: 0;
-}
-.main-top h2{
-    text-align: center;
-    margin: 20px auto;
-}
-.main-top .lef img{
-    display: block;
-    height: 345px;
-    height: 345px;
-}
-.main-top .rig img{
-    display: block;
-    height: 345px;
-}
-main .main-middle{
-    display: flex;
-    width: 970px;
+
+.main__shoppingcart__container .shoppingcart__container .project{
+    width: 80%;
     margin: 0 auto;
-    padding-top: 650px;
-}
-main .main-middle img{
-    display: block;
-    height: 345px;
-}
-main .main-middle h2{
-    font-size: 24px;
-    margin-left: 40px;
-    padding-top: 50px;
-}
-main .main-buttom{
-    margin: 0 auto;
-    width: 1130px;
-    padding-top: 80px;
-}
-.main-buttom ul{
     display: flex;
     justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(111, 81, 41);
+    
 }
-.main-buttom ul li{
+.main__shoppingcart__container .shoppingcart__container .project p:nth-child(1){
+    min-width: 300px;
+}
+.main__shoppingcart__container .shoppingcart__container .project p:nth-child(2){
+    flex-grow: 1;
+}
+.main__shoppingcart__container .shoppingcart__container .post{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+ 
+.main__shoppingcart__container .shoppingcart__container .list__container{
+    margin-bottom: 20px;
+}
+.main__shoppingcart__container .shoppingcart__container .list__container ul{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 讓價格部會因為商品名稱長短而影響價格位置，價格會統一對齊靠左 */
+.main__shoppingcart__container .shoppingcart__container .list__container .list__block{
+    min-width: 300px;
+}
+
+
+.main__shoppingcart__container .shoppingcart__container .list__container  h4{
+    flex-grow: 1;
+}
+/* 讓價格部會因為商品名稱長短而影響價格位置，價格會統一對齊靠左 */
+
+.main__shoppingcart__container .shoppingcart__container .list__container ul li{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.main__shoppingcart__container .shoppingcart__container .list__container ul .list__number{
+    width: 50px;
+}
+.main__shoppingcart__container .bottom__checkout{
+    margin: 0 auto;
+    background-color: rgb(111, 81, 41);
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    width: 80px;
+
+    cursor: pointer;
+}
+/* -- header導覽列 -- */
+header{
+    background-image: url("../index-image/footer\(1440x200\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 20px;
+    position: relative;
+
+    /* position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10; */
+}
+header .top-logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+header .top-logo img{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+header .top-logo p{
+    margin-left: 15px;
+}
+header nav{
+    float: right;
+}
+header nav ul{
+    padding-right: 20px;
+}
+header nav ul li{
+    float: left;
+    padding: 0 10px;
+}
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+header nav ul li a img{
+    width: 20px;
+}
+header nav ul li a:hover{
+    border-bottom: 1px solid #fff;
+    color: rgb(235, 192, 136);
+    transition: 1s;
+
+    /* cursor: pointer;  */
+}
+header nav .shopping-cart{
 
 }
-.main-buttom ul img{
-    display: block;
-    height: 345px;
-    width: 345px;
+header nav .shopping-cart a:hover img{
+    width: 40px;
+    transition: 1s;
 }
-.main-buttom ul h2{
+header nav .fa-bars{
+    display: none;
+}
+header nav #shop__car--icon{
+    cursor: pointer;
+    padding-bottom: 2px;
+}
+header nav #shop__car--icon:hover {
+    color: rgb(235, 192, 136);
+    border-bottom: 1px solid white;
+    transition: 1s;
+}
+/* -- movie -- */
+.wrapper .movie{
+}
+.wrapper iframe{
+    width: 100%;
+    height: 500px;
+    
+    display: block;  /* 為了去除影片下方的空白空間 */
+}
+/* -- main -- */
+.wrapper main{
+    width: 95%;
+    margin: 0 auto;
+}
+.wrapper main ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    margin: 30px 0;
+}
+.wrapper main ul li{
+    flex-basis: 300px;
     text-align: center;
-    margin-top: 20px;
+    padding: 20px;
+}
+.wrapper main ul li img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.wrapper main ul li a{
+    text-decoration: none;
+    display: flex;
+
+    justify-content: center;
+}
+.wrapper main ul li a:hover{
+
+}
+.wrapper main ul li p{
+    color: rgb(167, 132, 76);
+    font-size: 24px;
+    padding: 0 10px;
+}
+.wrapper main ul li h3{
+    background-color: rgb(167, 132, 76);
+    color: white;
+    font-size: 24px;
+    padding: 0 3px;
 }
 /* -- footer -- */
 footer{
     background-image: url("../index-image/footer\(1440x200\).jpg");
-    height: 200px;
-    display: flex;
-    margin-top: 1400px;
-    position: relative;
-}
-footer img{
-    display: block;
-    height: 86px;
-    width: 86px;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 100px;
-    margin: auto;
-}
-footer h3{
-    color: white;
-    font-size: 24px;
-    line-height: 200px;
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 220px;
-    margin: auto;
-}
-footer ul{
+    padding: 20px 20px;
     display: flex;
-    width: 185px;
-    align-items: center;
     justify-content: space-between;
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 100px;
+    align-items: center;
 }
-footer ul li{
-    border: 2px solid white;
+footer .footer-logo{
+    display: flex;
+    align-items: center;
+}
+footer IMG{
     display: block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    position: relative;
+    width: 60px;
+    height: 60px;
 }
-footer ul li img{
-    display: block;
+footer .footer-logo p{
+    margin-left: 15px;
 }
-footer .img-1{
-    width: 28px;
-    height: 21px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+footer .footer-icon{
 }
-footer .img-2{
-    width: 12px;
-    height: 28px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-footer .img-3{
-    width: 26px;
-    height: 24px;
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-footer h2{
+footer .footer-icon a{
     color: white;
-    font-size: 20px;
-    text-align: center;
+    padding-bottom: 5px;
+}
+footer .footer-icon a:hover{
+    color: rgb(235, 192, 136);
+    transition: 1s;
+}
+footer .footer-icon i{
+    padding: 0 10px;
+}
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+
+/* ------------------------------ RWD 麵包屑------------------------------ */
+
+@media (max-width:700px) {
+    header nav .fa-solid{
+        display: block;
+    }
+
+    header nav ul{
+        position: absolute;
+        background-color: rgb(161, 112, 39);
+        padding: 0;
+        z-index: 15;
+        top: 80px;
+        right: 0;
+
+        width: 30%;
+        height: calc(100vh - 80px);
+
+        display: none;
+    }
+    header nav ul li{
+        float: none;
+        /* position: absolute; */
+        text-align: center;
+        padding: 15px 0;
+
+        border-bottom:1px solid rgb(123, 81, 17);
+        
+    }
+    header nav .fa-solid:hover ~ul{
+        display: block;
+    }
 }
